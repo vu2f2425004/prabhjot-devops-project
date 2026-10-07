@@ -6,11 +6,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/vu2f2425004/prabhjot-devops-project.git'
             }
         }
-        stage('Install Dependencies') {
-            steps {
-                bat 'pip install -r requirements.txt'
-            }
-        }
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t student-app .'
