@@ -2,8 +2,8 @@ pipeline {
     agent any
     stages {
         stage('Clone Repository') {
-            steps {
-                git 'https://github.com/vu2f2425004/prabhjot-devops-project.git' 
+            steps {git branch: 'main', url: 'https://github.com/vu2f2425004/prabhjot-devops-project.git'
+                git '' 
             }
         }
         stage('Install Dependencies') {
